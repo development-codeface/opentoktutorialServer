@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if [ -z "$TOKBOX_API_KEY" ] || [ -z "$TOKBOX_SECRET" ]
+then
+  export TOKBOX_API_KEY=46163292
+  export TOKBOX_SECRET=436f0b34f67e82089f741ff6509c9608919f8d82
+fi
+
+if [ -d "storage" ]
+then
+  rm -rf storage/
+fi
+
+php -S localhost:8080 -t web/
