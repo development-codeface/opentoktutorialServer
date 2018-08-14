@@ -1,35 +1,8 @@
-![logo](./tokbox-logo.png)
 
-# OpenTok Getting Started Sample App
-
-A simple server that uses the [OpenTok](https://tokbox.com/developer/)
-[PHP SDK](https://github.com/opentok/Opentok-PHP-SDK) to create sessions,
-generate tokens for those sessions, archive (or record) sessions, and download
-those archives.
-
-## Quick deploy to Heroku
-
-Heroku is a PaaS (Platform as a Service) that can be used to deploy simple and small applications
-for free. To easily deploy this repository to Heroku, sign up for a Heroku account and click this
-button:
-
-<a href="https://heroku.com/deploy?template=https://github.com/opentok/learning-opentok-php" target="_blank">
-  <img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy">
-</a>
-
-Heroku will prompt you to add your OpenTok API key and OpenTok API secret, which you can
-obtain at the [TokBox Dashboard](https://dashboard.tokbox.com/keys).
-
-## Requirements
-
-- [Composer](https://getcomposer.org/)
-- [Slim](https://www.slimframework.com/)
-
-## Installation & Running on localhost
 
   1. Clone the app by running the command
   
-		  git clone git@github.com:opentok/learning-opentok-php.git
+		  github.com/development-codeface/opentoktutorialServer.git
 
   2. `cd` to the root directory.
 
@@ -57,6 +30,13 @@ run-demo script:
 
   6. Visit the URL <http://localhost:8080/session> in your browser. You should see a JSON response
 containing the OpenTok API key, session ID, and token.
+
+7. close server ctrl+C
+
+# Open websocket
+1. `cd` to the ROOTDIRECTORY/ws/bin
+2. start server php server.php 
+3. close server ctrl+C
 
 # Exploring the code
 
@@ -188,14 +168,3 @@ GET /archive?count=10  // fetch the first 10 archive objects
 GET /archive?offset=10  // fetch archives but first 10 archive objetcs
 GET /archive?count=10&offset=10 // fetch 10 archive objects starting from 11st
 ```
-
-## More information
-
-This sample app does not provide client-side OpenTok functionality
-(for connecting to OpenTok sessions and for publishing and subscribing to streams).
-It is intended to be used with the OpenTok tutorials for Web, iOS, iOS-Swift, or Android:
-
-* [Web](https://tokbox.com/developer/tutorials/web/basic-video-chat/)
-* [iOS](https://tokbox.com/developer/tutorials/ios/basic-video-chat/)
-* [iOS-Swift](https://tokbox.com/developer/tutorials/ios/swift/basic-video-chat/)
-* [Android](https://tokbox.com/developer/tutorials/android/basic-video-chat/)
